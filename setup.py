@@ -4,6 +4,9 @@ setup(
     name='install_freedesktop',
     version='0.1.0',
     description='Setuptools extension to install freedesktop.org app icons',
+    long_description="""\
+Setuptools extension to install launcher icons for KDE, GNOME, or other
+freedesktop.org compatible Linux/UNIX environments.""",
     author='Jacob Welsh',
     author_email='jacob@welshcomputing.com',
     url='https://github.com/welshjf/install_freedesktop',
@@ -20,6 +23,9 @@ setup(
         'Topic :: Software Development :: Build Tools',
     ],
     py_modules=['install_freedesktop'],
+    install_requires=[
+        'setuptools',
+    ],
     entry_points={
         'distutils.commands': [
             'install = install_freedesktop:install',
