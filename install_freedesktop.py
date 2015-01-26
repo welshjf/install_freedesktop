@@ -13,13 +13,17 @@
 # limitations under the License.
 
 from setuptools.command.install import install as _install
-from setuptools.command.easy_install import current_umask
 import os
 from distutils import log
 from distutils.core import Command
 from distutils.errors import DistutilsSetupError
 
 __version__ = '0.1.0'
+
+def current_umask():
+    old = os.umask(0)
+    os.umask(old)
+    return old
 
 class install(_install):
 
