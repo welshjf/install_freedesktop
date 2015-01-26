@@ -34,7 +34,7 @@ argument), desktop entry files will be automatically installed for each
 
     setup(
         ...
-        setup_requires=['install_freedesktop']
+        setup_requires=['install_freedesktop'],
         entry_points={
             'gui_scripts': [
                 'myapp=myapp:main',
@@ -51,7 +51,7 @@ and its value is a dict containing the desktop entry keys/values. Example::
 
     setup(
         ...
-        setup_requires=['install_freedesktop']
+        setup_requires=['install_freedesktop'],
         scripts=['myscript'],
         desktop_entries={
             'myscript': {
