@@ -2,11 +2,12 @@ from setuptools import setup
 
 setup(
     name='install_freedesktop',
-    version='0.1',
+    version='0.1.0',
     description='Setuptools extension to install freedesktop.org app icons',
     author='Jacob Welsh',
     author_email='jacob@welshcomputing.com',
     url='https://github.com/welshjf/install_freedesktop',
+    license='Apache License 2.0',
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Intended Audience :: Developers',

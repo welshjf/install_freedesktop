@@ -19,6 +19,8 @@ from distutils import log
 from distutils.core import Command
 from distutils.errors import DistutilsSetupError
 
+__version__ = '0.1.0'
+
 class install(_install):
 
     "Overridden install command to add the subcommand"
