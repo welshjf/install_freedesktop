@@ -67,10 +67,12 @@ Notes
 
 Either system-wide or ``--user`` mode installation is supported, as well as
 ``--root=`` (for package builders). But egg-based installation will not work,
-as the desktop files will be inside the egg, not the real data directory (“this
+as the data files will be inside the egg, not the real data directory (“this
 is a feature, not a bug” according to setuptools). Thus, you must either use
-``pip`` (recommended) or the ``--single-version-externally-managed`` option
-(directly or through *setup.cfg*).
+``pip`` (recommended) or provide the ``--single-version-externally-managed``
+option yourself, on the command line or in *setup.cfg*. Wheels and any other
+relocatable bdist formats will also not work, due to the need to use the final
+script path for the Exec in the desktop file.
 
 Using the ``setup_requires`` argument is potentially dangerous: if the package
 is not found, EasyInstall will be invoked to fetch it from PyPI, even if the
