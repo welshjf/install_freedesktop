@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from setuptools.command.install import install as _install
+from setuptools.command.install import install
 import os
 from distutils import log
 from distutils.core import Command
@@ -25,15 +25,10 @@ def current_umask():
     os.umask(old)
     return old
 
-class install(_install):
-
-    "Overridden install command to add the subcommand"
-    # XXX is there a better way to do this?
-
-    sub_commands = _install.sub_commands + [
-        ('install_desktop', lambda self: True),
-#        ('install_icons', lambda self: True),
-    ]
+install.sub_commands.extend([
+    ('install_desktop', lambda self: True),
+#    ('install_icons', lambda self: True),
+])
 
 class install_desktop(Command):
 

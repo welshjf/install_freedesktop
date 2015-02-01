@@ -33,7 +33,6 @@ setup(
     ],
     entry_points={
         'distutils.commands': [
-            'install = install_freedesktop:install',
             'install_desktop = install_freedesktop:install_desktop',
         ],
         'distutils.setup_keywords': [
