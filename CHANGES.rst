@@ -1,6 +1,11 @@
 Changes
 =======
 
+0.1.2 (2015-02-01)
+------------------
+
+* Simplify subcommand invocation (hopefully more correct and less fragile)
+
 0.1.1 (2015-01-26)
 ------------------
 

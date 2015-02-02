@@ -8,7 +8,7 @@ with codecs.open('CHANGES.rst', encoding='utf-8') as f:
 
 setup(
     name='install_freedesktop',
-    version='0.1.1',
+    version='0.1.2',
     description='Setuptools extension to install freedesktop.org app icons',
     long_description=README + '\n\n' + CHANGES,
     author='Jacob Welsh',

@@ -18,7 +18,7 @@ from distutils import log
 from distutils.core import Command
 from distutils.errors import DistutilsSetupError
 
-__version__ = '0.1.1'
+__version__ = '0.1.2'
 
 def current_umask():
     old = os.umask(0)
